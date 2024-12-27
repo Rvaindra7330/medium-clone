@@ -22,7 +22,7 @@ export const Auth=({type}:{type:"signup"|"signin"})=>{
             console.log('response:',response.data)
             const jwt=response.data;
             localStorage.setItem("token",jwt);
-            alert("received token")
+            
             navigate("/blogs")
         }catch(e){
             alert("error while signing up")
