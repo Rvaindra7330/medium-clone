@@ -8,7 +8,7 @@ export  const BlogCard=({authorName,title,content,publishedDate}:BlogCardprops)=
     return <div>
         <div className="flex pt-1">
         <div className="flex justify-center flex-col">
-           <Avatar name={authorName}></Avatar>
+           <Avatar size={"small"} name={authorName}></Avatar>
             
         </div>
         <div className="font-extrlight  pl-2 flex justify-center flex-col ">
