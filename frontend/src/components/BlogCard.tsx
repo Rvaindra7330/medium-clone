@@ -1,10 +1,11 @@
 interface BlogCardprops{
+    id:number;
     authorName:string;
     title:string;
     content:string;
     publishedDate:string;
 }
-export  const BlogCard=({authorName,title,content,publishedDate}:BlogCardprops)=>{
+export  const BlogCard=({id,authorName,title,content,publishedDate}:BlogCardprops)=>{
     return <div>
         <div className="flex pt-1">
         <div className="flex justify-center flex-col">
