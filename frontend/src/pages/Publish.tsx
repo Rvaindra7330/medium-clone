@@ -53,7 +53,7 @@ function TextEditor({onChange}:{onChange:(e:ChangeEvent<HTMLTextAreaElement>)=>v
     return <div>
         <div className="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
           
-           <textarea  rows={8} className="block w-full focus:outline-none px-0 text-sm text-gray-800 bg-white border-0  focus:ring-0 " placeholder="Write an article..." required ></textarea>
+           <textarea onChange={onChange} rows={8} className="block w-full focus:outline-none px-0 text-sm text-gray-800 bg-white border-0  focus:ring-0 " placeholder="Write an article..." required ></textarea>
        </div>
    
    
