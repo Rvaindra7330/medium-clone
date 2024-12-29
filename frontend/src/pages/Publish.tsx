@@ -8,6 +8,12 @@ export const Publish = () => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("")
     const navigate = useNavigate();
+
+    const rawToken = localStorage.getItem("token");
+        //@ts-ignore
+        const parsedToken = JSON.parse(rawToken); 
+        const jwtToken = parsedToken.jwt;
+
     return <div>
         <Appbar></Appbar>
         <div className="flex justify-center w-full">
@@ -21,16 +27,17 @@ export const Publish = () => {
         setContent(e.target.value)
       }}/>
       <button onClick={async ()=>{
-        axios.post(`${BACKEND_URL}/api/v1/blog`,{
+        const response = await axios.post(`${BACKEND_URL}/api/v1/blog`,{
             title,
             content
         },
         {
             headers:{
-                Authorization:
+                Authorization:jwtToken
             }
         }
     )
+    navigate(`/blog/${response.data.id}`)
       }} type="submit" className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200  hover:bg-blue-800">
        Publish post
    </button>
