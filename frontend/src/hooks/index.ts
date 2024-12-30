@@ -51,6 +51,7 @@ export const  useBlogs=()=>{
         //@ts-ignore
         const parsedToken = JSON.parse(rawToken); 
         const jwtToken = parsedToken.jwt;
+        console.log(jwtToken)
             axios.get(`${BACKEND_URL}/api/v1/blog/bulk`,{
                 headers:{
                     Authorization:jwtToken

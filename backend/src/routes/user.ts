@@ -33,8 +33,8 @@ userRouter.post('/signup',async (c) => {
         name:body.name
       }
     })
-    const token=await sign({id:user.id},c.env.JWT_SECRET)
-    return c.json({token})
+    const jwt=await sign({id:user.id},c.env.JWT_SECRET)
+    return c.json({jwt})
   }catch(e){
     c.status(403)
     return c.json({message:"user exists"})
