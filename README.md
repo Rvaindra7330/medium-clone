@@ -81,3 +81,9 @@ This stateless authentication model is well-suited for serverless environments.
 ```bash
 git clone https://github.com/Rvaindra7330/medium-clone.git
 cd medium-clone
+cd frontend
+npm install
+npm run dev
+cd backend
+npm install
+npm run dev
