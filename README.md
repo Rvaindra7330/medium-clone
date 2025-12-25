@@ -54,7 +54,7 @@ This stateless authentication model is well-suited for serverless environments.
 
 ## 🔗 Links
 
-- **GitHub Repository:** https://github.com/Rvaindra7330/medium-clonee  
+- **GitHub Repository:** https://github.com/Rvaindra7330/medium-clone  
 - **Live Demo:** https://medium-clone-xi-snowy.vercel.app/ 
 
 ---
